@@ -18,9 +18,12 @@ GenerateRandomCoordinates.java
 ![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/e2dc79d5-5a68-4da9-8224-c1b636187283)
 100,000 random coordinates generated with radius=100
 
-Calculation Result: 
+Calculation Result:
+
 Inside 785817
+
 Outside 214183
+
 PI: 3.143268
 
 #### Conclusion
