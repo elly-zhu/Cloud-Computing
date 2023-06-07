@@ -35,6 +35,7 @@ The exploration of pi calculation using MapReduce not only provided practical in
 
 #### Others
 Google Slide: https://docs.google.com/presentation/d/1X2jd1o2m72zHpJB-P4_OazOF9SpCMhLfK3sdSEmh-EE/edit?usp=sharing
+
 ----
 ### Full Inverted Index
 #### Design Approach
