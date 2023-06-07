@@ -35,3 +35,46 @@ The exploration of pi calculation using MapReduce not only provided practical in
 
 #### Others
 Google Slide: https://docs.google.com/presentation/d/1X2jd1o2m72zHpJB-P4_OazOF9SpCMhLfK3sdSEmh-EE/edit?usp=sharing
+----
+### Full Inverted Index
+#### Design Approach
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/6bc9cd51-4462-44c3-b2be-60d3ca5ba3c3)
+The design approach for implementing a full inverted index involves utilizing the MapReduce framework to process the input text documents, extract unique words, and associate them with their respective coordinates (file index and word index) to enable efficient searching and analysis of the document collection.
+
+#### Preparation
+Environment: 
+GCP, Ubuntu VM, MapReduce
+Dataset Preparation:
+- Text files:
+ -- File0.txt: it is what it is
+ -- File1.txt: what is it 
+ -- File2.txt: it is a banana
+
+
+#### Execution
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/b6909ee7-644a-4338-9641-a7255d04bd87)
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/24a56052-2a61-475e-90e8-d039049c1414)
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/c81a42ed-4d19-438e-a197-bddc19a805b0)
+
+
+Calculation Result:
+a       (2, 2)
+
+banana  (2, 3)
+
+is      (2, 1),(0, 4),(0, 1),(1, 1)
+
+it      (2, 0),(0, 3),(0, 0),(1, 2)
+
+what    (0, 2),(1, 0)
+
+#### Conclusion
+In conclusion, the successful implementation of the inverted index using MapReduce showcases the ability to process large volumes of textual data and generate meaningful representations for efficient information retrieval. 
+
+The program's ability to map words to their coordinates, reflecting the file index and word position, allows for quick and accurate searching of specific terms within the document collection.
+
+This application has diverse potential uses, including document clustering, content recommendation, and keyword-based analysis. By harnessing the power of distributed computing and the MapReduce framework, we can unlock the full potential of big data analysis and gain valuable insights from large-scale text datasets.
+
+
+#### Others
+Google Slide: https://docs.google.com/presentation/d/1A-2AjmcEzK4fH8vMTpuyqi0yZ9kBgwpD20bDkNtLRyQ/edit?usp=sharing
