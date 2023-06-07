@@ -58,6 +58,7 @@ Dataset Preparation:
 
 
 Calculation Result:
+
 a       (2, 2)
 
 banana  (2, 3)
