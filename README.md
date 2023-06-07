@@ -46,9 +46,9 @@ Environment:
 GCP, Ubuntu VM, MapReduce
 Dataset Preparation:
 - Text files:
- -- File0.txt: it is what it is
- -- File1.txt: what is it 
- -- File2.txt: it is a banana
+ - File0.txt: it is what it is
+ - File1.txt: what is it 
+ - File2.txt: it is a banana
 
 
 #### Execution
