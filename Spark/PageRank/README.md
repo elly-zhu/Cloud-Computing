@@ -26,19 +26,47 @@ PR(C) = (1-d) + d * (PR(B)/1 + PR(A)/2)
 #### Preparation
 Environment: 
 GCP, Ubuntu VM, Dataproc, Spark 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9e57f4b3-9c6a-4465-a919-95c93a71576f/Untitled.png)  
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e43458a-7383-4ee0-bfb4-df34b3888a9f/Untitled.png)  
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc44c65c-8f47-4cad-8445-752ce5737072/Untitled.png)  
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/bdb5be72-945d-49f8-b062-c7f1d34a054f)
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/9ec68005-a2a5-477a-a4b0-a389882adc0d)
 Dataset Preparation:  
 pagerank_input.txt  
 A C  
 A B  
 C A  
 B C  
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b8a3b0af-96ab-485b-b13c-5ae721f0d209/Untitled.png)  
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25e1ed84-4f64-4c22-89cc-299791809b93/Untitled.png)  
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/3ac29e84-8e36-4e4c-a419-323d46f7bebf)
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/77765432-e3c0-4f27-99db-b30073298672)
+
 #### Execution
 ##### PySpark
+Create the pagerank.py file  
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/4d754b7d-123b-43a0-9018-71e676ec78b6)  
+Run the pagerank.py from the cloud shell terminal with the input file in the bucket  
+
+**Set iteration = 1**  
+Run the command in Cloud Shell with argument iteration = 1  
+```gcloud dataproc jobs submit pyspark --cluster cluster-7e47 --region us-central1 pagerank.py -- gs://pagerank_ezhu9249/pagerank_input.txt 1 ```
+
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/c1373faf-9122-4e14-b1fe-97d9fc90da70)
+
+**Get Result (iteration = 1)**  
+ - A has rank: 1.0. 
+ - B has rank: 0.575.  
+ - C has rank: 1.4249999999999998.
+
+**Set iteration = 2**  
+
+Rerun the command in Cloud Shell with argument iteration = 2  
+```gcloud dataproc jobs submit pyspark --cluster cluster-7e47 --region us-central1 pagerank.py -- gs://pagerank_ezhu9249/pagerank_input.txt 2 ```
+
+![image](https://github.com/elly-zhu/Cloud-Computing/assets/22209839/e093f650-a5d1-47d1-a2b7-40ee56ffd485)
+
+**Get Result (iteration = 2)**  
+ - A has rank: 1.3612499999999996.
+ - B has rank: 0.575.
+ - C has rank: 1.06375.
+
+
 
 ##### Scala
 #### Conclusion
